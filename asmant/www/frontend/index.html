@@ -6,7 +6,7 @@
     <title>Asmant Concrete Works | Premium Cabro Paving & Fencing Kenya</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -14,13 +14,16 @@
                     colors: {
                         primary: '#1e441e',
                         secondary: '#d30b14',
-                    }
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                    },
                 }
             }
         }
     </script>
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; scroll-behavior: smooth; }
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -44,7 +47,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Restoring your original hero path */
             background-image: url('/assets/asmant/images/hero-cabros.jpg');
             background-size: cover;
             background-position: center;
@@ -141,19 +143,19 @@
     <section id="stats" class="py-12 bg-white relative z-10 -mt-16 mx-4 max-w-6xl lg:mx-auto rounded-3xl shadow-2xl grid grid-cols-2 md:grid-cols-4 gap-6 px-8 items-center border border-gray-100">
         <div class="text-center border-r border-gray-100 last:border-0">
             <div class="text-4xl font-black text-primary">100k<span class="text-secondary">+</span></div>
-            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">SQM Installed</div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1 font-sans">SQM Installed</div>
         </div>
         <div class="text-center md:border-r border-gray-100 last:border-0">
             <div class="text-4xl font-black text-primary">850<span class="text-secondary">+</span></div>
-            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">Clients Served</div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1 font-sans">Clients Served</div>
         </div>
         <div class="text-center border-r border-gray-100 last:border-0">
             <div class="text-4xl font-black text-primary">Precast</div>
-            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">Expert Craftsmanship</div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1 font-sans">Expert Craftsmanship</div>
         </div>
         <div class="text-center">
             <div class="text-4xl font-black text-primary">10/10</div>
-            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">Service Rating</div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1 font-sans">Service Rating</div>
         </div>
     </section>
 
@@ -174,8 +176,13 @@
                         <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl text-primary font-black text-xs">Best For Driveways</div>
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-black text-primary mb-3 text-center">Trihex 3D Blocks</h4>
-                        <a href="https://wa.me/2540703393095" class="block text-center py-4 bg-primary text-white rounded-2xl font-bold hover:bg-secondary transition mt-4">Order Now</a>
+                        <h4 class="text-2xl font-black text-primary mb-3">Trihex 3D Blocks</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Modern interlocking 3D design that provides exceptional surface stability and a unique geometric aesthetic. Perfect for high-end residential parking.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm font-bold text-gray-700"><i class="fas fa-check-circle text-primary mr-2"></i> 50mm & 60mm Depth</li>
+                            <li class="flex items-center text-sm font-bold text-gray-700"><i class="fas fa-check-circle text-primary mr-2"></i> Anti-Slip Surface</li>
+                        </ul>
+                        <a href="https://wa.me/2540703393095" class="block text-center py-4 bg-primary text-white rounded-2xl font-bold hover:bg-secondary transition">Order Now</a>
                     </div>
                 </div>
 
@@ -185,9 +192,14 @@
                         <img src="/assets/asmant/images/block.webp" alt="I-Block Cabro" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
                         <div class="absolute bottom-4 left-4 bg-secondary text-white px-4 py-2 rounded-xl font-black text-xs uppercase">Heavy Duty</div>
                     </div>
-                    <div class="p-8 text-center">
+                    <div class="p-8">
                         <h4 class="text-2xl font-black text-primary mb-3">Industrial I-Blocks</h4>
-                        <a href="https://wa.me/2540703393095" class="block text-center py-4 bg-primary text-white rounded-2xl font-bold hover:bg-secondary transition mt-4">Get Commercial Quote</a>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">The gold standard for industrial yards and heavy-traffic areas. These blocks offer superior weight distribution and durability under pressure.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm font-bold text-gray-700"><i class="fas fa-check-circle text-secondary mr-2"></i> Heavy Vehicle Support</li>
+                            <li class="flex items-center text-sm font-bold text-gray-700"><i class="fas fa-check-circle text-secondary mr-2"></i> 80mm Industrial Grade</li>
+                        </ul>
+                        <a href="https://wa.me/2540703393095" class="block text-center py-4 bg-primary text-white rounded-2xl font-bold hover:bg-secondary transition">Get Quote</a>
                     </div>
                 </div>
 
@@ -197,9 +209,14 @@
                         <img src="/assets/asmant/images/tblock.jpeg" alt="Double-T Cabro" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
                         <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl text-primary font-black text-xs">Versatile Design</div>
                     </div>
-                    <div class="p-8 text-center">
+                    <div class="p-8">
                         <h4 class="text-2xl font-black text-primary mb-3">Double-T Blocks</h4>
-                        <a href="https://wa.me/2540703393095" class="block text-center py-4 bg-primary text-white rounded-2xl font-bold hover:bg-secondary transition mt-4">Inquire Supply</a>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">A classic, reliable choice for walkways and public spaces. Known for its strong interlocking capability and cost-effective maintenance.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm font-bold text-gray-700"><i class="fas fa-check-circle text-primary mr-2"></i> Elegant Patterning</li>
+                            <li class="flex items-center text-sm font-bold text-gray-700"><i class="fas fa-check-circle text-primary mr-2"></i> Quick Installation</li>
+                        </ul>
+                        <a href="https://wa.me/2540703393095" class="block text-center py-4 bg-primary text-white rounded-2xl font-bold hover:bg-secondary transition">Inquire Supply</a>
                     </div>
                 </div>
             </div>
@@ -342,9 +359,9 @@
     <!-- CTA -->
     <section class="py-24 bg-primary text-white relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tighter">Quality Concrete <span class="text-secondary">Direct</span> From The Yard</h2>
+            <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tighter text-white">Quality Concrete <span class="text-secondary">Direct</span> From The Yard</h2>
             <p class="text-gray-300 text-lg md:text-xl mb-12">Contact us via 0703393095 for custom orders and bulk deliveries.</p>
-            <a href="https://wa.me/2540703393095" class="inline-flex items-center bg-secondary px-12 py-6 rounded-3xl font-black text-2xl hover:bg-red-700 transition shadow-2xl hover:scale-105 active:scale-95 duration-200 uppercase tracking-tighter">
+            <a href="https://wa.me/2540703393095" class="inline-flex items-center bg-secondary px-12 py-6 rounded-3xl font-black text-2xl hover:bg-red-700 transition shadow-2xl hover:scale-105 active:scale-95 duration-200 uppercase tracking-tighter text-white">
                 <i class="fab fa-whatsapp mr-4 text-3xl"></i> Chat with Experts
             </a>
         </div>
@@ -361,8 +378,8 @@
                     </div>
                     <p class="text-sm leading-relaxed mb-6">Supplying and fitting high-strength concrete products for residential and industrial projects in Kenya.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=61563470914128" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition text-xs"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/asmant133" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition text-xs"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563470914128" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition text-xs text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/asmant133" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition text-xs text-gray-400"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-16">
