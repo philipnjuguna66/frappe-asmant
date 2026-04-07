@@ -3,255 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nairobi Concrete & Cabro Works | Premium Paving Solutions Kenya</title>
+    <title>Asmant Concrete Works | Premium Cabro Paving Kenya</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e441e',
+                        secondary: '#d30b14',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass-nav {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
         }
+        /* Hero using a high-quality residential cabro driveway image */
         .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1590060153000-02c310452366?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(30, 68, 30, 0.75), rgba(30, 68, 30, 0.75)), url('https://images.unsplash.com/photo-1590060153000-02c310452366?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
         .product-card:hover img { transform: scale(1.05); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav border-b border-gray-200">
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center space-x-2">
-                    <div class="bg-orange-600 p-2 rounded-lg">
+                    <div class="bg-primary p-2 rounded-lg shadow-lg shadow-primary/20">
                         <i class="fas fa-hard-hat text-white text-xl"></i>
                     </div>
-                    <span class="text-2xl font-800 tracking-tighter text-gray-900">Asmant <span class="text-orange-600">CONCRETE WORKS</span></span>
+                    <span class="text-xl md:text-2xl font-extrabold tracking-tighter text-primary uppercase">
+                        ASMANT <span class="text-secondary">CONCRETE</span>
+                    </span>
                 </div>
-                <div class="hidden md:flex space-x-8 font-medium">
-                    <a href="#home" class="hover:text-orange-600 transition">Home</a>
-                    <a href="#products" class="hover:text-orange-600 transition">Products</a>
-                    <a href="#stats" class="hover:text-orange-600 transition">Our Impact</a>
-                    <a href="#testimonials" class="hover:text-orange-600 transition">Clients</a>
-                    <a href="tel:+2540703393095" class="bg-orange-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition">Get Quote</a>
+                <div class="hidden md:flex items-center space-x-8 font-semibold">
+                    <a href="#home" class="text-gray-700 hover:text-secondary transition">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-secondary transition">Cabro Designs</a>
+                    <a href="#stats" class="text-gray-700 hover:text-secondary transition">Our Reach</a>
+                    <a href="tel:+2540703393095" class="bg-secondary text-white px-6 py-2.5 rounded-full hover:bg-red-700 transition shadow-md shadow-secondary/30">
+                        Get Quote
+                    </a>
                 </div>
-                <button class="md:hidden text-2xl" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+                <button class="md:hidden text-2xl text-primary" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="fixed inset-0 bg-white z-[60] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold">
-        <button class="absolute top-6 right-6" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
-        <a href="#home" onclick="toggleMenu()">Home</a>
-        <a href="#products" onclick="toggleMenu()">Products</a>
-        <a href="#stats" onclick="toggleMenu()">Impact</a>
-        <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-[60] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold transition-all duration-300">
+        <button class="absolute top-6 right-6 text-3xl" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+        <a href="#home" onclick="toggleMenu()" class="hover:text-secondary text-primary">Home</a>
+        <a href="#products" onclick="toggleMenu()" class="hover:text-secondary text-primary">Cabro Designs</a>
+        <a href="#stats" onclick="toggleMenu()" class="hover:text-secondary text-primary">Our Reach</a>
+        <a href="tel:+2540703393095" class="bg-secondary text-white px-8 py-3 rounded-full mt-4">Call Us Now</a>
     </div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-center px-4 pt-20">
-        <div class="max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-800 text-white mb-6 leading-tight">
-                Paving the Future of <span class="text-orange-500 underline decoration-4 underline-offset-8">Kenya</span>
+    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl pt-20">
+            <span class="inline-block bg-secondary text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest mb-6 shadow-lg">
+                Top Rated Paving Experts
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-[1.1]">
+                High Quality <span class="text-secondary underline decoration-secondary/30">Cabro</span> Paving Works
             </h1>
-            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
-               One Precast Block at a Time. Durable, Sustainable, and Beautiful Paving Solutions for Every Project.
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+               Transforming Kenyan driveways, compound floors, and industrial yards with precision-engineered concrete cabros.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#products" class="bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-700 transition-all flex items-center justify-center">
-                    View Catalog <i class="fas fa-arrow-right ml-2"></i>
+                <a href="#products" class="bg-secondary text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-red-700 transition-all flex items-center justify-center shadow-xl shadow-black/30">
+                    Explore Cabro Designs <i class="fas fa-th ml-2 text-sm"></i>
                 </a>
-                <a href="https://wa.me/2540703393095" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center">
-                    WhatsApp Inquiry <i class="fab fa-whatsapp ml-2 text-green-400"></i>
+                <a href="https://wa.me/2540703393095" class="bg-primary/40 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary/60 transition-all flex items-center justify-center">
+                    WhatsApp Price List <i class="fab fa-whatsapp ml-2 text-green-400"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Statistics Section -->
-    <section id="stats" class="py-20 bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-4xl md:text-5xl font-800 text-orange-600 mb-2">500k+</div>
-                <div class="text-gray-500 font-medium uppercase tracking-wider text-sm">Sq Meters Paved</div>
-            </div>
-            <div>
-                <div class="text-4xl md:text-5xl font-800 text-orange-600 mb-2">1,200+</div>
-                <div class="text-gray-500 font-medium uppercase tracking-wider text-sm">Projects Done</div>
-            </div>
-            <div>
-                <div class="text-4xl md:text-5xl font-800 text-orange-600 mb-2">3+</div>
-                <div class="text-gray-500 font-medium uppercase tracking-wider text-sm">Years Experience</div>
-            </div>
-        
+    <!-- Stats Bar -->
+    <section id="stats" class="py-12 bg-white relative z-10 -mt-12 mx-4 max-w-6xl lg:mx-auto rounded-3xl shadow-2xl grid grid-cols-2 md:grid-cols-4 gap-6 px-8 items-center border border-gray-100">
+        <div class="text-center border-r border-gray-100 last:border-0">
+            <div class="text-3xl md:text-4xl font-extrabold text-primary">500k<span class="text-secondary">+</span></div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">Blocks Laid</div>
+        </div>
+        <div class="text-center md:border-r border-gray-100 last:border-0">
+            <div class="text-3xl md:text-4xl font-extrabold text-primary">1,200<span class="text-secondary">+</span></div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">Sites Completed</div>
+        </div>
+        <div class="text-center border-r border-gray-100 last:border-0">
+            <div class="text-3xl md:text-4xl font-extrabold text-primary">60mm<span class="text-secondary">+</span></div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">Block Depth</div>
+        </div>
+        <div class="text-center">
+            <div class="text-3xl md:text-4xl font-extrabold text-primary">100<span class="text-secondary">%</span></div>
+            <div class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">Client Satisfaction</div>
         </div>
     </section>
 
-    <!-- Products Section -->
-   <section id="products" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-                <div>
-                    <h2 class="text-orange-600 font-bold tracking-widest uppercase text-sm mb-2">The Catalog</h2>
-                    <h3 class="text-4xl font-800 text-gray-900">Premium Paving Blocks</h3>
-                </div>
-                <a href="#" class="bg-white px-6 py-3 border border-gray-200 rounded-xl font-bold text-gray-900 hover:shadow-md transition flex items-center">
-                    <i class="fas fa-download mr-2 text-orange-600"></i> Full Price List
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300">
-                    <div class="h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=1974&auto=format&fit=crop" alt="Tri-hex" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute bottom-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">Top Seller</div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-2">Tri-Hex Interlocking</h4>
-                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Perfectly symmetrical interlocking design for heavy-duty driveways. Available in Black, Red, and Grey.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-gray-400">Available: 50mm, 60mm, 80mm</span>
-                            <button class="text-orange-600 font-black text-sm uppercase tracking-wider">Inquire</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="product-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300">
-                    <div class="h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop" alt="I-Blocks" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute bottom-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">Industrial Grade</div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-2">Industrial I-Blocks</h4>
-                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Specially engineered 80mm blocks for petrol stations, warehouse yards, and high-tonnage areas.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-gray-400">Heavy Duty Reinforced</span>
-                            <button class="text-orange-600 font-black text-sm uppercase tracking-wider">Inquire</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300">
-                    <div class="h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" alt="3D" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute bottom-4 left-4 bg-gray-900 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">Architectural</div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-2">3D Geometric Pavers</h4>
-                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Modern patterns creating visual depth and luxury aesthetics for patios and high-end gardens.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-gray-400">Designer Finish</span>
-                            <button class="text-orange-600 font-black text-sm uppercase tracking-wider">Inquire</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof / Testimonials -->
-    <section id="testimonials" class="py-24 bg-white overflow-hidden">
+    <!-- Cabro Products Section -->
+    <section id="products" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-800 text-gray-900 mb-4">Your Trusted Partner in Quality Precast Solutions</h2>
-                <p class="text-gray-600">Supplying quality concrete products to the leading developers in the region.</p>
+                <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-3">Our Signature Range</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-primary">Paving Cabro Solutions</h3>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">From light-duty residential paths to heavy-duty industrial yards, we have the perfect cabro for your project.</p>
             </div>
 
-            <!-- Client Logos (Mocked Real Developers) -->
-            <div class="flex flex-wrap justify-center items-center gap-12 mb-20 opacity-60 grayscale hover:grayscale-0 transition duration-500">
-                <span class="text-2xl font-bold text-gray-400">Amccoproperties Ltd</span>
-
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-8 bg-gray-50 rounded-3xl relative">
-                    <i class="fas fa-quote-left text-orange-200 text-6xl absolute top-6 right-6"></i>
-                    <div class="flex items-center space-x-1 text-orange-500 mb-4 text-xs">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Trihex Card -->
+                <div class="product-card group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="assets/asmant/assets/images/trihex.jpg" alt="Trihex Cabro" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-secondary text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase shadow-lg">Residential Hero</div>
                     </div>
-                    <p class="text-lg text-gray-700 italic mb-6">
-                        "The quality of the Tri-Hex blocks supplied for our estate in Kiambu was exceptional. Not only was the finish precise, but the delivery schedule was strictly adhered to. Highly recommended."
-                    </p>
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center font-bold text-orange-600">JK</div>
-                        <div>
-                            <p class="font-bold">John Kamau</p>
-                            <p class="text-sm text-gray-500">Project Manager, SPN Real Estate</p>
-                        </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3 text-primary">Trihex 3D Cabros</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Our most requested design for estates and modern homes. Creates a stunning interlocking visual effect that is both strong and stylish.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-center text-xs font-bold text-gray-500">
+                                <i class="fas fa-check text-secondary mr-2"></i> Depth: 50mm / 60mm
+                            </li>
+                            <li class="flex items-center text-xs font-bold text-gray-500">
+                                <i class="fas fa-check text-secondary mr-2"></i> High Gloss Finish Available
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/2540703393095" class="w-full inline-block text-center bg-primary text-white py-4 rounded-xl font-bold hover:bg-secondary transition duration-300">
+                            Request Supply & Fit
+                        </a>
                     </div>
                 </div>
 
-                <div class="p-8 bg-gray-50 rounded-3xl relative">
-                    <i class="fas fa-quote-left text-orange-200 text-6xl absolute top-6 right-6"></i>
-                    <div class="flex items-center space-x-1 text-orange-500 mb-4 text-xs">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <!-- Industrial I-Blocks -->
+                <div class="product-card group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/assets/asmant/assets/images/block.webp" alt="I-Block Cabro" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase shadow-lg">Industrial Grade</div>
                     </div>
-                    <p class="text-lg text-gray-700 italic mb-6">
-                        "Excellent service! They handled the entire installation process from site preparation to the final sweep. Our commercial parking lot looks modern and has zero drainage issues."
-                    </p>
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center font-bold text-orange-600">AW</div>
-                        <div>
-                            <p class="font-bold">Alice Wanjiku</p>
-                            <p class="text-sm text-gray-500">Operations Lead, Westlands Hub</p>
-                        </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3 text-primary">Industrial I-Blocks</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Engineered for heavy traffic environments like petrol stations and loading bays. Guaranteed to withstand heavy tonnages without cracking.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-center text-xs font-bold text-gray-500">
+                                <i class="fas fa-check text-secondary mr-2"></i> Depth: 80mm Heavy Duty
+                            </li>
+                            <li class="flex items-center text-xs font-bold text-gray-500">
+                                <i class="fas fa-check text-secondary mr-2"></i> Vibration Resistant
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/2540703393095" class="w-full inline-block text-center bg-primary text-white py-4 rounded-xl font-bold hover:bg-secondary transition duration-300">
+                            Commercial Inquiries
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Double-T Patterns -->
+                <div class="product-card group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/assets/asmant/assets/images/tblock.jpeg" alt="Double-T Cabro" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-secondary text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase shadow-lg">Classic Choice</div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3 text-primary">Double-T Cabros</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">The standard for durability and ease of replacement. Widely used for municipal pavements and large-scale parking lots across Nairobi.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-center text-xs font-bold text-gray-500">
+                                <i class="fas fa-check text-secondary mr-2"></i> Depth: 60mm Standard
+                            </li>
+                            <li class="flex items-center text-xs font-bold text-gray-500">
+                                <i class="fas fa-check text-secondary mr-2"></i> Excellent Drainage Design
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/2540703393095" class="w-full inline-block text-center bg-primary text-white py-4 rounded-xl font-bold hover:bg-secondary transition duration-300">
+                            Get Bulk Estimate
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="py-20 bg-gray-900 text-white">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-800 mb-8">Start Your Paving Project Today</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-phone-alt text-2xl text-orange-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-1">Call Us</h3>
-                    <p class="text-gray-400">+254 703 393 095</p>
+    <!-- Project Gallery Feature -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="/assets/asmant/assets/images/3d.jpg" class="rounded-2xl shadow-lg mt-8" alt="Compound Cabro">
+                    <img src="/assets/asmant/assets/images/floor-vlocks.jpeg" class="rounded-2xl shadow-lg" alt="Paving Installation">
                 </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-map-marker-alt text-2xl text-orange-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-1">Location</h3>
-                    <p class="text-gray-400">Kikuyu,Lusegetti, 100Mtrs Off shell Petro Station</p>
+                <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-2xl shadow-2xl hidden lg:block">
+                    <p class="text-3xl font-black">100%</p>
+                    <p class="text-xs uppercase font-bold tracking-widest">Quality Sourced</p>
                 </div>
-                <!-- <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-envelope text-2xl text-orange-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-1">Email</h3>
-                    <p class="text-gray-400">info@nairobcabro.co.ke</p>
-                </div> -->
             </div>
-            <a href="https://wa.me/2540703393095" class="inline-block bg-orange-600 px-10 py-4 rounded-full font-bold text-xl hover:bg-orange-700 transition shadow-2xl">
-                Request a Free Site Visit
+            <div>
+                <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4">Why Choose Us?</h2>
+                <h3 class="text-4xl font-extrabold text-primary mb-6 leading-tight">Mastering the Art of Concrete Paving</h3>
+                <p class="text-gray-600 mb-8 leading-relaxed">We don't just supply blocks; we provide a complete paving ecosystem. Our team handles excavation, site preparation, compaction, and final laying of cabros to ensure zero sinking and perfect drainage for years to come.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="bg-primary/10 p-2 rounded-lg mr-4 mt-1"><i class="fas fa-shield-alt text-primary"></i></div>
+                        <div><p class="font-bold text-primary">5-Year Structural Warranty</p><p class="text-sm text-gray-500">We guarantee our levels and installation against sinking.</p></div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="bg-primary/10 p-2 rounded-lg mr-4 mt-1"><i class="fas fa-truck text-primary"></i></div>
+                        <div><p class="font-bold text-primary">Timely Site Deliveries</p><p class="text-sm text-gray-500">Logistics managed directly from our yard to your project site.</p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-4">Client Feedback</h2>
+            <h3 class="text-4xl font-extrabold text-primary mb-16">Trusted by Kenya's Developers</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+                    <p class="text-gray-700 italic mb-8 font-medium">"Asmant Concrete transformed our estate entrance in Kikuyu. The Trihex pattern they installed is the talk of the neighborhood. Professional and very efficient!"</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">MK</div>
+                        <div><p class="font-bold text-primary">Moses Kimani</p><p class="text-xs text-gray-500">Homeowner, Kikuyu</p></div>
+                    </div>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+                    <p class="text-gray-700 italic mb-8 font-medium">"We used their heavy-duty I-blocks for our warehouse parking in Mlolongo. 2 years later, even with heavy lorries, the surface remains perfectly level."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-bold">SN</div>
+                        <div><p class="font-bold text-primary">Sarah Njeri</p><p class="text-xs text-gray-500">Logistics Manager, Prime Ltd</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-primary text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 uppercase tracking-tight">Level Up Your Compound</h2>
+            <p class="text-gray-300 text-lg mb-12 max-w-2xl mx-auto">Contact Asmant Concrete Works for premium supply and installation of interlocking cabro paving across Kenya.</p>
+            
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-16">
+                <div class="flex items-center space-x-3 text-left">
+                    <i class="fas fa-phone-alt text-secondary text-2xl"></i>
+                    <div><p class="text-xs uppercase text-gray-400 font-bold">Call Us</p><p class="font-bold">+254 703 393 095</p></div>
+                </div>
+                <div class="hidden md:block w-px h-10 bg-white/20"></div>
+                <div class="flex items-center space-x-3 text-left">
+                    <i class="fas fa-map-marker-alt text-secondary text-2xl"></i>
+                    <div><p class="text-xs uppercase text-gray-400 font-bold">Location</p><p class="font-bold">Kikuyu, Lusegetti, Shell Petro Station</p></div>
+                </div>
+            </div>
+
+            <a href="https://wa.me/2540703393095" class="inline-flex items-center bg-secondary px-12 py-5 rounded-2xl font-bold text-xl hover:bg-red-700 transition shadow-2xl hover:scale-105 active:scale-95 duration-200">
+                <i class="fab fa-whatsapp mr-3 text-2xl"></i> Chat with Paving Experts
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 text-gray-500 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-6 md:mb-0">
-                <span class="text-xl font-800 text-white">NAIROBI<span class="text-orange-600">CONCRETE</span></span>
-                <p class="text-sm mt-2">© 2026 Nairobi Concrete & Cabro Works. All rights reserved.</p>
+    <footer class="bg-[#0c1a0c] text-gray-500 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between mb-16">
+                <div class="max-w-sm mb-10 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="bg-primary p-1.5 rounded-md"><i class="fas fa-hard-hat text-white text-sm"></i></div>
+                        <span class="text-xl font-extrabold text-white tracking-tighter uppercase">Asmant Concrete</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Providing durable, stylish, and high-strength concrete cabro solutions for residential and commercial spaces in Kenya since 2023.</p>
+                </div>
+                <div class="flex space-x-12">
+                    <div>
+                        <h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Links</h5>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="#products" class="hover:text-secondary transition">Cabro Catalog</a></li>
+                            <li><a href="#stats" class="hover:text-secondary transition">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Follow</h5>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/profile.php?id=61563470914128" class="text-xl hover:text-secondary transition"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/asmant133" class="text-xl hover:text-secondary transition"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex space-x-6 text-xl">
-                <a href="https://www.facebook.com/profile.php?id=61563470914128" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/asmant133" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
-               
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] font-bold">
+                <p>© 2026 Asmant Concrete Works Ltd.</p>
+                <p class="mt-4 md:mt-0 text-secondary">Quality First. Always.</p>
             </div>
         </div>
     </footer>
@@ -263,13 +318,14 @@
             menu.classList.toggle('flex');
         }
 
-        // Add sticky nav shadow on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.classList.add('shadow-lg');
+                nav.classList.add('shadow-2xl');
+                nav.classList.add('h-16');
             } else {
-                nav.classList.remove('shadow-lg');
+                nav.classList.remove('shadow-2xl');
+                nav.classList.remove('h-16');
             }
         });
     </script>
